@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/economy
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 12341234
+  web:
+    resources:
+      static-locations: classpath:/static/,classpath:/public/,classpath:/resources/,classpath:/META-INF/resources/
+
+  jpa:
+    hibernate:
+      ddl-auto: update  # ?? ???? ??? ?? ????? ??. ???? ????? ??? ?? ??.
+    show-sql: true      # SQL ?? ?? ???
+
+  hibernate:
+    dialect: org.hibernate.dialect.PostgreSQLDialect
